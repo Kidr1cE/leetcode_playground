@@ -6,8 +6,13 @@ ProblemName: 老人的数目
 
 package leetcode
 
+// charInt & 15 = int
 func countSeniors(details []string) int {
-	var res = 0
-
+	res := 0
+	for _, s := range details {
+		if s[11:13] > "60" {
+			res++
+		}
+	}
 	return res
 }
